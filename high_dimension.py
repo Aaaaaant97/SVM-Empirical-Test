@@ -75,7 +75,7 @@ ax1.plot(dims, results['lasso_acc'], '*-', linewidth=2.5, label='Lasso', color='
 ax1.plot(dims, results['ridge_acc'], 'x--', linewidth=2, label='Ridge', color='gray') # Gray
 ax1.plot(dims, results['mlp_acc'], 's:', linewidth=2, label='MLP', color='#d62728', alpha=0.6) # Red
 
-ax1.set_title(f'Prediction Accuracy vs. Dimension\n(N={n_samples}, True Features=10)', fontsize=14)
+ax1.set_title(f'Prediction Accuracy vs. Dimension', fontsize=14)
 ax1.set_xlabel('Feature Dimension (D)', fontsize=12)
 ax1.set_ylabel('Test Accuracy', fontsize=12)
 ax1.grid(True, linestyle='--', alpha=0.6)
@@ -84,10 +84,10 @@ ax1.legend(fontsize=11)
 # --- Plot 2: Complexity ---
 ax2.set_yscale('log')
 
-ax2.plot(dims, results['svm_cplx'], 'o-', linewidth=3, label='SVM (Support Vectors)', color='#1f77b4')
-ax2.plot(dims, results['lasso_cplx'], '*-', linewidth=2.5, label='Lasso (Non-Zero Weights)', color='#2ca02c')
-ax2.plot(dims, results['ridge_cplx'], 'x--', linewidth=2, label='Ridge (All Weights ~ D)', color='gray')
-ax2.plot(dims, results['mlp_cplx'], 's:', linewidth=2, label='MLP (All Params)', color='#d62728', alpha=0.6)
+ax2.plot(dims, results['svm_cplx'], 'o-', linewidth=3, label='SVM', color='#1f77b4')
+ax2.plot(dims, results['lasso_cplx'], '*-', linewidth=2.5, label='Lasso', color='#2ca02c')
+ax2.plot(dims, results['ridge_cplx'], 'x--', linewidth=2, label='Ridge', color='gray')
+ax2.plot(dims, results['mlp_cplx'], 's:', linewidth=2, label='MLP', color='#d62728', alpha=0.6)
 
 ax2.set_title(f'Effective Model Complexity (Log Scale)', fontsize=14)
 ax2.set_xlabel('Feature Dimension (D)', fontsize=12)
