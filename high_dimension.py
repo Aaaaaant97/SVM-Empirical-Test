@@ -96,5 +96,5 @@ ax2.grid(True, linestyle='--', alpha=0.6, which="both")
 ax2.legend(fontsize=11)
 
 plt.tight_layout()
-plt.savefig('exp_1_models_comparison.png', dpi=300)
+plt.savefig('exp1.png', dpi=300)
 plt.show()
